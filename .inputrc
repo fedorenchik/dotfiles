@@ -1,5 +1,3 @@
-set blink-matching-paren
-set colored-completion-prefix
 set colored-stats
 set completion-query-items 200
 set editing-mode emacs

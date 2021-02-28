@@ -90,3 +90,7 @@
 	autosetuprebase = always
 [credential]
 	helper = store
+[notes]
+	rewriteRef = refs/notes/*
+[feature]
+	manyFiles = true

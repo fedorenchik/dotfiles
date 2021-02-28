@@ -1,9 +1,6 @@
 export LFS=/mnt/lfs
 
-case $- in
-	*i*) ;;
-	*) return;;
-esac
+[[ $- != *i* ]] && return
 
 colors() {
 	local fgc bgc vals seq0
@@ -48,6 +45,7 @@ shopt -s expand_aliases
 
 source ~/.git-prompt.sh
 
+xhost +local:root > /dev/null 2>&1
 complete -cf sudo
 
 # make less more friendly for non-text input files, see lesspipe(1)
@@ -265,6 +263,20 @@ ex ()
   fi
 }
 
+# usage: codi [filetype] [filename]
+codi()
+{
+	local syntax="${1:-python}"
+	shift
+	gvim -c \
+		"let g:startify_disable_at_vimenter = 1 |\
+		set bt=nofile ls=0 noru nonu nornu |\
+		hi ColorColumn cctermbg=NONE |\
+		hi VertSplit ctermbg=NONE |\
+		hi NonText ctermfg=0 |\
+		Codi $syntax" "$@"
+}
+
 # argument can be 'c' or 'c++'
 gcc_include_search()
 {
@@ -294,3 +306,5 @@ export PIP_REQUIRE_VIRTUALENV=true
 gpip() {
 	PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
+
+export MANPAGER="gvim -M +MANPAGER -"
