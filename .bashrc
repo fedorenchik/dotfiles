@@ -29,6 +29,9 @@ colors() {
 	done
 }
 
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
 [[ -f /usr/share/bash-completion/completions/git ]] && . /usr/share/bash-completion/completions/git
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
@@ -37,11 +40,16 @@ ulimit -c unlimited
 HISTTIMEFORMAT="%F %T "
 HISTCONTROL=ignoreboth
 shopt -s histappend
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
+HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 shopt -s checkwinsize
 shopt -s globstar
 shopt -s expand_aliases
+
+GREP_OPTIONS="--color=auto"
+LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
+
 
 source ~/.git-prompt.sh
 
