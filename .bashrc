@@ -307,4 +307,4 @@ gpip() {
 	PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
 
-export MANPAGER="gvim -M +MANPAGER -"
+export MANPAGER="gvim --not-a-term -M +MANPAGER -"
