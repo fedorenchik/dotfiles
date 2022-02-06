@@ -18,3 +18,5 @@ fi
 
 # Needed to run GUI apps in Docker
 xhost +local:root >/dev/null 2>&1
+
+export QT_STYLE_OVERRIDE=kvantum
