@@ -131,7 +131,7 @@ GIT_PS1_SHOWCOLORHINTS=1
 
 function prompt_command()
 {
-	__git_ps1 "${debian_chroot:+($debian_chroot)}${VIRTUAL_ENV:+(${VIRTUAL_ENV##*/})}$C_B_G\u@\h!\l$C_R:$C_B_B\w$C_R " " \n $C_Y{\j}$C_R $C_M\t$C_R [\$?] \\\$ " "<%s>"
+	__git_ps1 "${debian_chroot:+($debian_chroot)}${CONDA_DEFAULT_ENV:+(conda ${CONDA_DEFAULT_ENV})}${VIRTUAL_ENV:+(py ${VIRTUAL_ENV##*/})}$C_B_G\u@\h!\l$C_R:$C_B_B\w$C_R " " \n $C_Y{\j}$C_R $C_M\t$C_R [\$?] \\\$ " "<%s>"
 }
 
 PROMPT_COMMAND=prompt_command
