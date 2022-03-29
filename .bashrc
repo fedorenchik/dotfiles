@@ -338,8 +338,8 @@ unset CONDA
 # conda init
 }
 
-idf-init() {
-. "$HOME/.local/opt/esp-idf/export.sh"
+espidf-init() {
+. "$HOME/.local/opt/esp-idf-v4.4/export.sh"
 }
 
 # BEGIN_KITTY_SHELL_INTEGRATION
