@@ -186,7 +186,7 @@ alias la='ls -A'
 alias l='ls'
 complete -F _longopt l
 alias b=exit
-alias f='nautilus .'
+alias f='nautilus . >/dev/null 2>&1 & disown'
 alias g=git
 complete -o bashdefault -o default -o nospace -F __git_wrap__git_main g
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
