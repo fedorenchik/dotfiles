@@ -94,3 +94,5 @@
 	rewriteRef = refs/notes/*
 [feature]
 	manyFiles = true
+[init]
+	defaultBranch = main
