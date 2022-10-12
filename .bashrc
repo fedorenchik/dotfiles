@@ -319,3 +319,9 @@ espidf-init() {
 pio-init() {
 . "$HOME/.platformio/penv/bin/activate"
 }
+
+nvm-init() {
+	export NVM_DIR="/usr/share/nvm"
+	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+}
