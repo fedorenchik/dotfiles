@@ -313,7 +313,11 @@ unset CONDA
 }
 
 espidf-init() {
-. "$HOME/.local/opt/esp-idf-v4.4/export.sh"
+. "$HOME/.local/opt/esp/esp-idf-v4.4.1/export.sh"
+}
+
+idf-init() {
+espidf-init
 }
 
 pio-init() {
