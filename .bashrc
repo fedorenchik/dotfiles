@@ -176,8 +176,42 @@ fi
 
 unset use_color safe_term match_lhs sh
 
+if which zoxide >/dev/null 2>&1; then
+	eval "$(zoxide init bash)"
+	alias cd="z"
+fi
+
+if which tldr >/dev/null 2>&1; then
+	alias man="tldr"
+	alias manman="command man"
+fi
+
+if which exa >/dev/null 2>&1; then
+	alias ls="exa --icons"
+fi
+
+if which duf >/dev/null 2>&1; then
+	alias df="duf --hide-mp '/var/lib/snapd/*'"
+fi
+
+if which bat >/dev/null 2>&1; then
+	alias cat="bat"
+fi
+
+export FZF_DEFAULT_COMMAND='find . \! \( -type d -path ./.git -prune \) \! -type d \! -name '\''*.tags'\'' -printf '\''%P\n'\'
+if which fzf >/dev/null 2>&1; then
+	alias find="fzf -f"
+fi
+
+if which most >/dev/null 2>&1; then
+	alias less="most"
+fi
+
+if which procs >/dev/null 2>&1; then
+	alias ps="procs"
+fi
+
 alias cp="cp -i"
-alias df='df -h'
 alias free='free -h'
 #alias np='nano -w PKGBUILD'
 alias more=less
