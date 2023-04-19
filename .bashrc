@@ -203,12 +203,28 @@ if which fzf >/dev/null 2>&1; then
 	alias find="fzf -f"
 fi
 
-if which most >/dev/null 2>&1; then
-	alias less="most"
+if which delta >/dev/null 2>&1; then
+	alias less="delta"
 fi
 
 if which procs >/dev/null 2>&1; then
 	alias ps="procs"
+fi
+
+if which rg >/dev/null 2>&1; then
+	alias grep="rg"
+fi
+
+if which tre >/dev/null 2>&1; then
+	alias tree="tre"
+fi
+
+if which dua >/dev/null 2>&1; then
+	alias du="dua"
+fi
+
+if which micro >/dev/null 2>&1; then
+	alias nano="micro"
 fi
 
 alias cp="cp -i"
