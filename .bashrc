@@ -44,7 +44,7 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 HISTSIZE=10000
 HISTFILESIZE=20000
-HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+HISTIGNORE="ls:cd:cd -:pwd:exit:date"
 shopt -s checkwinsize
 shopt -s globstar
 shopt -s expand_aliases
