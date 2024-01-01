@@ -249,6 +249,7 @@ if [ "$DATA_STORAGE" != "" ] && [ -d "$DATA_STORAGE" ]; then
     export ANDROID_USER_HOME="$DATA_STORAGE/android_home"
     export GRADLE_USER_HOME="$DATA_STORAGE/gradle_home"
     export PYENV_ROOT="$DATA_STORAGE/pyenv_root"
+    export FVM_HOME="$DATA_STORAGE/fvm"
 fi
 
 # ex - archive extractor
