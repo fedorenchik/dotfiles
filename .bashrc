@@ -246,7 +246,6 @@ if [ "$DATA_STORAGE" != "" ] && [ -d "$DATA_STORAGE" ]; then
     export JULIA_DEPOT_PATH="$DATA_STORAGE/julia_home"
     export KERAS_HOME="$DATA_STORAGE/keras_home"
     export NPM_CONFIG_CACHE="$DATA_STORAGE/npm_home"
-    export ANDROID_USER_HOME="$DATA_STORAGE/android_home"
     export GRADLE_USER_HOME="$DATA_STORAGE/gradle_home"
     export PYENV_ROOT="$DATA_STORAGE/pyenv_root"
     export FVM_HOME="$DATA_STORAGE/fvm"
