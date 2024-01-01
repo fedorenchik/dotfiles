@@ -249,6 +249,8 @@ if [ "$DATA_STORAGE" != "" ] && [ -d "$DATA_STORAGE" ]; then
     export GRADLE_USER_HOME="$DATA_STORAGE/gradle_home"
     export PYENV_ROOT="$DATA_STORAGE/pyenv_root"
     export FVM_HOME="$DATA_STORAGE/fvm"
+elif [ "$HOSTNAME" == "vega" ]; then
+    export FVM_HOME="$HOME/.local/opt/fvm"
 fi
 
 # ex - archive extractor
