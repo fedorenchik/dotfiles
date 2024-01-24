@@ -88,6 +88,7 @@
 	olp = %h%x09%an%x09%ad%x09%s
 	ll = %C(auto)%h %Cgreen%an%Creset %s
 [branch]
+	autosetupmerge = always
 	autosetuprebase = always
 [credential]
 	helper = store
