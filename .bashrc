@@ -232,6 +232,7 @@ complete -o bashdefault -o default -o nospace -F __git_wrap__git_main g
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 export LFS=/mnt/lfs
+export PYENV_ROOT="$HOME/.pyenv"
 [[ "$HOSTNAME" == "orion" ]] && export DATA_STORAGE=/data/data3
 if [ "$DATA_STORAGE" != "" ] && [ -d "$DATA_STORAGE" ]; then
     export VAGRANT_HOME="$DATA_STORAGE/vagrant.d"
@@ -388,4 +389,9 @@ pio-init() {
 
 nvm-init() {
 	. /usr/share/nvm/init-nvm.sh
+}
+
+pyenv-init() {
+	[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+	eval "$(pyenv init -)"
 }
