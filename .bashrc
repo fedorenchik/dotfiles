@@ -376,7 +376,7 @@ unset CONDA
 }
 
 espidf-init() {
-. /opt/esp-idf/export.sh
+. "$HOME/.local/opt/esp-idf-v5.3.2/export.sh"
 }
 
 idf-init() {
