@@ -390,7 +390,5 @@ nvm-init() {
 	. /usr/share/nvm/init-nvm.sh
 }
 
-pyenv-init() {
-	[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-	eval "$(pyenv init -)"
-}
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
